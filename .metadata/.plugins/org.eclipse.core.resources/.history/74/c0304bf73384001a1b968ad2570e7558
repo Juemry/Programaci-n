@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Ej4 {
+	private static Scanner input = new Scanner (System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num1 = 0;
+		int num2 = 0;
+		
+		do {
+		num1 = devuelveNumero(num1);
+		num2 = devuelveNumero(num2);
+		} while (num1>num2);
+		
+		System.out.println("La secuencia de números incluidos los ingresados es : ");
+		for (int i = num1; i <= num2 ; i=2) {
+			System.out.println (i);
+		}
+		
+		System.out.println("La secuencia de números excuidos los ingresados es : ");
+		for (int i = num1+1; i < num2 ; i++) {
+			System.out.println (i);
+		} 
+
+		
+	}
+	private static int devuelveNumero (int num) {
+		System.out.println("Ingrese un número");
+		num = input.nextInt();
+		return num;
+	}
+	
+}

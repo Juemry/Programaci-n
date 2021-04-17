@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class Ej7 {
+	private static Scanner input =new Scanner (System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String creeUsuario = "";
+		String creeContrasena = "";
+		String usuario = "";
+		String contrasena = "";
+		int intentos = 1;
+		
+		System.out.println("Por favor cree un usuario");
+		creeUsuario = input.next();
+		
+		input.nextLine();
+		
+		System.out.println("Por favor cree una contraseña");
+		creeContrasena = input.next();
+		
+		input.nextLine();
+		
+		usuario = devuelveUsuario(usuario);
+		contrasena = devuelveContrasena(contrasena);
+		
+		for (int i=1; i<3; i++) {
+		
+			if (creeUsuario.equals(usuario) && creeContrasena.equals(contrasena)) {
+			System.out.println("Bienvenido!");
+			break;
+			
+			} 
+		
+			else if (!creeUsuario.equals(usuario) || !creeContrasena.equals(contrasena)) {
+			
+			System.out.println("Error");
+			usuario = devuelveUsuario(usuario);
+			contrasena = devuelveContrasena(contrasena);
+			intentos = intentos+1;
+
+			}
+			
+		}  {System.out.println("Su usuario ha sido bloqueado");}
+		
+	}
+				
+	private static String devuelveUsuario (String usuario) {
+		
+		System.out.println("Ingrese su usuario");
+		usuario = input.next();
+		return usuario;
+	}	
+	
+	private static String devuelveContrasena (String contrasena) {	
+	
+		System.out.println("Ingrese su constraseña");
+		contrasena = input.next();
+		return contrasena;
+	}
+}

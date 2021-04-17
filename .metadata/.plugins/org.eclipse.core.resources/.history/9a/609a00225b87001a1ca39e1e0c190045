@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Ej6 {
+	private static Scanner input = new Scanner (System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 
+		 String alumno = "";
+		 String mejorAlumno = "";
+		 double alumnoPromedio = 0;
+		 double mejorPromedio = 0;
+		 for (int i=0; i<=3; i++) {
+		
+			System.out.println("Ingrese el nombre del alumno");
+			alumno = input.next();
+		
+			alumnoPromedio = devuelveAlumnoYPromedio (alumnoPromedio);
+				
+		 	 } if (mejorPromedio<alumnoPromedio) { 
+			 mejorPromedio = alumnoPromedio;
+			 mejorAlumno = alumno;
+		 }
+		 
+	}
+	
+	private static double devuelveAlumnoYPromedio (double num) {
+		
+		input.nextLine();
+		System.out.println("Ingrese el promedio del alumno");
+		num = input.nextDouble();
+		
+		return num;
+		
+	}
+	
+}

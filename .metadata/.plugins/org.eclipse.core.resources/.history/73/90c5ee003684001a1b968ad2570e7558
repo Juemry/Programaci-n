@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Ej5 {
+	private static Scanner input = new Scanner (System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num = 0;
+		
+		num = devuelveNumero (num);
+		
+		
+	}
+	private static int devuelveNumero (int num) {
+		int promedio = 0;
+		int totalNumeros = 0;
+		int sumaTotal = 0;
+				
+		do {			
+			System.out.println("Ingrese un número");
+			num = input.nextInt();
+			
+			totalNumeros = totalNumeros +1;
+			
+			sumaTotal = sumaTotal + num;
+			
+			promedio = sumaTotal/totalNumeros;			
+		} while(promedio<20);
+		
+		System.out.println("La cantidad de valores leidos fue de " + totalNumeros + "números.");
+		return num;
+	}
+}
